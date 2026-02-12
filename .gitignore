@@ -1,0 +1,29 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+env/
+venv/
+
+# AI / Project specific
+data/chat_history/
+*.log
+
+# Secrets & Config
+.env
+.flaskenv
+
+# IDEs & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# uv (Das lock-file sollte eingecheckt werden, aber der cache nicht)
+.uv/
