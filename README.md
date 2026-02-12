@@ -1,5 +1,9 @@
 # 🍷 Giulia: The Elite Executive AI Assistant
 
+<div align="center">
+    <img src="assets/raptile_bytez_logo.png" alt="Raptile Bytez Logo" width="200">
+</div>
+
 Giulia is a sophisticated, persona-driven AI assistant built on the **Gemini 3 Flash** architecture. She blends high-level project management and coding expertise with a magnetic, "confidante" personality.
 
 ---
@@ -49,6 +53,7 @@ uv run main.py
 
 ## 📂 Project Structure
 ```text
+├── assets/                # Logos
 ├── data/
 │   └── chat_history/      # Session JSON files
 ├── prompts/
