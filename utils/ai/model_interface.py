@@ -26,3 +26,8 @@ class AIModelInterface(ABC):
             str: The generated response from the AI model.
         """
         pass
+
+    @abstractmethod
+    def get_type(self) -> str:
+        """Returns the provider type (e.g., 'gemini', 'openai', 'mock')."""
+        pass

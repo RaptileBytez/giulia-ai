@@ -35,6 +35,9 @@ class GeminiProvider(AIModelInterface):
             )
         )
         return str(response.text)
+    
+    def get_type(self) -> str:
+        return "gemini"
 
 class MockProvider(AIModelInterface):
     """Fake implementation for testing and saving costs."""
@@ -45,3 +48,6 @@ class MockProvider(AIModelInterface):
     def generate(self, system_instruction: str, messages: list) -> str:
         log.debug("MockProvider: Intercepted request.")
         return "Boss, this is a simulated response. The interface works perfectly!"
+    
+    def get_type(self) -> str:
+        return "mock"

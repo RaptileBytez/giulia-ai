@@ -32,10 +32,11 @@ def main():
     else:
         model = GeminiProvider(model_name="gemini-3-flash-preview")
     
+    guilia = GuiliaChatbot(session_id=args.session, ai_model=model)
+
+    
     print("--- 🍷 Giulia is online ---")
     print("(Type 'exit' or 'quit' to end the session)\n")
-
-    guilia = GuiliaChatbot(session_id=args.session, ai_model=model)
 
     while True:
         # 1. Get user input from terminal

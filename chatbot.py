@@ -15,12 +15,17 @@ class GuiliaChatbot:
     def __init__(self, session_id="default_user", ai_model=None):               
         # Der Provider kapselt jetzt ALLES (Client, Modell-Name, Retries)
         self.ai_model = ai_model or GeminiProvider()
+        
+        provider_type = self.ai_model.get_type()
+
         model_tag = getattr(self.ai_model, "model_name", None)
 
         self.loader = PromptLoader(default_model_tag=model_tag)
-        self.history_manager = HistoryManager()
+        self.history_manager = HistoryManager(provider_type=provider_type)
+
         self.session_id = session_id
         now = datetime.now().strftime("%I:%M %p")
+
         self.system_instruction = self.loader.get_prompt(
             "core/giulia_assistant",
             current_time=now, 
